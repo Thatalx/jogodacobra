@@ -2,9 +2,20 @@ function jogar(){
     tela.desenhar();
     cobra.desenhar();
     placar.desenhar();
+    maca.desenhar();
     cobra.mover();
-    requestAnimationFrame(jogar);
+    if (maca.teveColisao(cobra)){
+        placar.pontuacao+=10;
+        maca = new Maca();
+    }
+    if (cobra.vida > 0)
+        requestAnimationFrame(jogar);
+    else{
+        placar.nomeJogo="Fim de Jogo"
+        placar.desenhar();
+    }
 }
+let maca = new Maca();
 jogar();
 
 document.addEventListener("keydown", (evento)=> {

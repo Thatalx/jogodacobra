@@ -5,6 +5,7 @@ largura:800,
 altura:60,
 corFundo:"purple",
 corTexto:"#39FF14",
+nomeJogo:"THE LIFE SNAKE",
 desenhar()
     {
         canvasCtx.fillStyle=this.corFundo;
@@ -13,7 +14,7 @@ desenhar()
         canvasCtx.textAlign='center';
         canvasCtx.textBaseline='middle';
         canvasCtx.font="20px Fantasy";
-        canvasCtx.fillText("THE LIFE SNAKE",400,30);
+        canvasCtx.fillText(this.nomeJogo,400,30);
         canvasCtx.font="18px Fantasy";
         canvasCtx.textAlign='left';
         canvasCtx.textBaseline='top';
